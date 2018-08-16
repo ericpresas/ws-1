@@ -1,0 +1,151 @@
+doctype //if IE 7
+html.no-js.lt-ie9.lt-ie8(lang='en')  
+//if IE 8
+  html.no-js.lt-ie9(lang='en')  
+// [if gt IE 8] <!
+|  
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    meta(name='author', content='')
+    |     
+    meta(name='description', content='')
+    |     
+    title Solofy
+    |     
+    link(rel='shortcut icon', href='img/favicon.png')
+    // CSS
+    link(rel='stylesheet', href='css/bootstrap.css')
+    |     
+    link(rel='stylesheet', href='css/fonts.css')
+    |     
+    link(rel='stylesheet', href='css/flexslider.css')
+    |     
+    link(rel='stylesheet', href='css/jquery.fancybox.css')
+    |     
+    link(rel='stylesheet', href='css/styles.css')
+    |     
+    link(rel='stylesheet', href='css/animate.css')
+    |     
+    |     
+    |     
+    script(src='js/libs/modernizr.min.js')
+  body
+    // search box
+    .search-big
+      input.search-desktop(type='search', placeholder='Search...', autofocus='')
+    // /search box
+    // header wrap
+    .header-wrap.back28
+      .header-wrap-inner
+        // main navigation
+        include ./includes/header.jade
+        // /main navigation
+        // banner title
+        section.page-title-location
+          .page-title-location-inner
+            .container
+              .row
+                .col-xs-12
+                  .location-container
+                    ol.breadcrumb
+                      li
+                        a(href='/')
+                          span.icn-container
+                            i.icon-reorder
+                          | Home
+                      
+                      li
+                        a(href='/')
+                          span.icn-container
+                            i.icon-reorder
+                          | Media
+                      |                                     
+                      li.active
+                        a(href='/videos') Videos
+                  |                             
+                  .title-container
+                    h1.title Videos
+        // /banner title
+      |     
+      |     
+      svg.curve-up.curve-up-white(xmlns='http://www.w3.org/2000/svg', version='1.1', width='100%', height='100', viewbox='0 0 100 100', preserveaspectratio='none')
+        path(d='M0 100 C 20 0 50 0 100 100 Z')
+    // /header wrap
+    // filters
+    section.filters-section
+      .container
+        .row
+          .col-sm-12.col-xs-12
+            .filter-container.isotopeFilters
+              ul#filter-list.list-unstyled.list-inline.filter
+                li.active
+                  a(href='#', data-filter='*') All 
+                  span /
+                |                         
+                li
+                  a(href='#', data-filter='.web') Web
+                  span /
+                |                         
+                li
+                  a(href='#', data-filter='.print') Print
+                  span /
+                |                         
+                li
+                  a(href='#', data-filter='.branding') Branding
+                  span /
+                |                         
+                li
+                  a(href='#', data-filter='.apps') Apps
+    // /filters
+    // portfolio items
+    section.portfolio-cols.col-text
+      .container
+        .row
+          .isotopeContainer
+            each video in Videos                
+              .col-sm-6.isotopeSelector.apps
+                article
+                  figure
+                    iframe(src='https://player.vimeo.com/video/149328856?title=0&byline=0&portrait=0', width='640', height='270', frameborder='0', webkitallowfullscreen='true', mozallowfullscreen='', allowfullscreen)
+                    |                     
+                  |                 
+                  .article-title
+                    a(href='portfolio-single.html') Intimately connected
+            |         
+            |                 
+            
+    // /portfolio items
+    // call to action hero
+    include ./includes/actionhero.jade
+    // /call to action hero
+    // main footer
+    include ./includes/footer.jade
+    // /main footer
+    // JS libs
+    script(src='js/libs/jquery.min.js')
+    script(src='js/libs/jquery-migrate.min.js')
+    script(src='js/libs/bootstrap.min.js')
+    script(src='js/libs/jquery.waypoints.min.js')
+    // JS plugins
+    script(src='js/plugins/superfish.js')
+    script(src='js/plugins/isotope.min.js')
+    script(src='js/plugins/jquery.counterup.min.js')
+    |  
+    script(src='js/plugins/instagram-fancybox.js')
+    |  
+    script(src='js/plugins/jquery.fancybox.pack.js')
+    script(src='js/plugins/jquery.tweet.mod.js')
+    script(src='js/plugins/jquery.flexslider-min.js')
+    script(src='js/plugins/typed.js')
+    script(src='js/plugins/wow.js')
+    // JS main
+    script(src='js/main.js')
+    script.
+      new WOW().init();

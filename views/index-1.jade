@@ -1,0 +1,90 @@
+doctype //if IE 7
+html.no-js.lt-ie9.lt-ie8(lang='en')  
+//if IE 8
+  html.no-js.lt-ie9(lang='en')  
+// [if gt IE 8] <!
+|  
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    meta(name='author', content='')
+    |     
+    meta(name='description', content='')
+    |     
+    title Solofy
+    |     
+    link(rel='shortcut icon', href='img/favicon.png')
+    // CSS
+    link(rel='stylesheet', href='css/bootstrap.css')
+    |     
+    link(rel='stylesheet', href='css/fonts.css')
+    |     
+    link(rel='stylesheet', href='css/flexslider.css')
+    |     
+    link(rel='stylesheet', href='css/jquery.fancybox.css')
+    |     
+    link(rel='stylesheet', href='css/styles.css')
+    |     
+    link(rel='stylesheet', href='css/animate.css')
+    |     
+    |     
+    script(src='js/libs/modernizr.min.js')
+  body
+    // search box
+    .search-big
+      input.search-desktop(type='search', placeholder='Search...', autofocus='')
+    // /search box
+    // header wrap
+    .header-wrap
+      .header-wrap-inner
+        include ./includes/header.jade
+    // /header wrap
+    // intro
+    section.photographer-intro
+      .container
+        .row
+          .col-xs-12.center
+            h1 Hey, I&apos;m Ashley!
+            |             &#x9;
+            p.lined-below Fashion Photographer Based out of New York.
+            |             &#x9;
+            h2
+              | I 
+              span#typed-photographer(style='white-space:pre;')
+    // /intro
+    // counter
+    include ./includes/counter.jade
+    // /counter
+    // services
+    include ./includes/services.jade
+    // /services
+    
+    // call to action hero
+    include ./includes/actionhero.jade
+    // /call to action hero
+    include ./includes/footer.jade
+    // JS libs
+    script(src='js/libs/jquery.min.js')
+    script(src='js/libs/jquery-migrate.min.js')
+    script(src='js/libs/bootstrap.min.js')
+    script(src='js/libs/jquery.waypoints.min.js')
+    // JS plugins
+    script(src='js/plugins/superfish.js')
+    script(src='js/plugins/isotope.min.js')
+    script(src='js/plugins/jquery.counterup.min.js')
+    script(src='js/plugins/instagram-fancybox.js')
+    script(src='js/plugins/jquery.fancybox.pack.js')
+    script(src='js/plugins/jquery.tweet.mod.js')
+    script(src='js/plugins/typed.js')
+    script(src='js/plugins/wow.js')
+    script(src='js/plugins/jquery.flexslider-min.js')
+    // JS main
+    script(src='js/main.js')
+    script.
+      new WOW().init();
